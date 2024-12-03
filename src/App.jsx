@@ -9,13 +9,13 @@ function App() {
       <div className="currency-converter">
       <div className="box"></div> 
       </div>
-      <h1> currency converter</h1>
+      <h1> Currency converter</h1>
       <div className="input container">
-       <label htmlFor="amt">amount</label>
+       <label htmlFor="amt">Amount</label>
        <input type="number"id="amt"/>
        <div className="input container">
-        <label htmlFor="from currency:"></label>
-        <select id="from currency">
+        <label htmlFor="from currency:"> From currency</label>
+        <select id="From currency">
           <option value="usd">usd-united states dollar</option>
           <option value="eur">eur-euro</option>
           <option value="gbp">gbp-british pound strerling</option>
@@ -29,8 +29,8 @@ function App() {
         </select>
        </div>
        <div className="input-container">
-        <label for="tp currency"> To currency:</label>
-        <select id= "to currency">
+        <label for="to currency"> To currency:</label>
+        <select id= "To currency">
           <option value="usd">usd-united states dollar</option>
           <option value="eur">eur-euro</option>
           <option value="gbp">gbp-british pound sterling</option>
@@ -44,7 +44,7 @@ function App() {
         </select>
        </div>
         <div className="result">
-          <p> 1 INR is equal to 83.25 </p>
+          <p> 1 INR is equal to 83.25 usd </p>
         </div>
       </div>
     </>
