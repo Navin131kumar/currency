@@ -10,7 +10,7 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color: blue;
+  background-color: rgb(196, 196, 224);
 }
 currency-converter{
   width:400px;
