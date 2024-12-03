@@ -44,7 +44,7 @@ function App() {
         </select>
        </div>
         <div className="result">
-          <p> 1 INR is equal to 83.25 usd</p>
+          <p> 1 INR is equal to 83.25 </p>
         </div>
       </div>
     </>
