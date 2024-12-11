@@ -14,10 +14,10 @@ body{
 }
 currency-converter{
   width:400px;
-  background-color: white;
+  background-color: rgb(221, 20, 20);
   border-radius: 8px;
   padding:10px 20px;
-  box-shadow:0 0 10ps rgba(0,0,0,0.1)
+  box-shadow:0 0 10ps rgba(0, 0, 0, 0.1)
 }
 h1{
   font-weight: 600;
@@ -44,7 +44,7 @@ box{
 label{
   display: block;
   margin-bottom: 5px;
-  color: #888;
+  color: rgb(136, 136, 136);
   font-weight: 500px;
 }
 input,
@@ -52,7 +52,7 @@ select{
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid#ccc;
+  border: 1px solidrgb(204, 204, 204);
   border-radius: 4px;
   font-size: 18px;
   outline: none;
@@ -60,7 +60,7 @@ select{
 .result{
   margin: 20px 0px;
   padding: 10px;
-  border: 2px dotted#3498db;
+  border: 2px dotted#db343c;
   border-radius: 4px;
 }
 .result p{
