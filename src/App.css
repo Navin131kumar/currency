@@ -10,15 +10,10 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color: rgb(196, 196, 224);
+  background: url("https://ik.imagekit.io/snujhhriv/395497-PCITPN-99.jpg?updatedAt=1734497425509");
+  background-size: contain;
 }
-currency-converter{
-  width:400px;
-  background-color: rgb(221, 20, 20);
-  border-radius: 8px;
-  padding:10px 20px;
-  box-shadow:0 0 10ps rgba(0, 0, 0, 0.1)
-}
+
 h1{
   font-weight: 600;
   text-transform: uppercase;
@@ -30,17 +25,20 @@ h1{
   border-bottom: 2px dashed#ccc;
   border-top: 2px dashed#ccc;
 }
-box{
+.box{
   width:100%;
   height: 200px;
-  background-image: "https://www.google.com/imgres?q=money%20images&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fhand-drawn-cartoon-dollar-sign-illustration_23-2150927138.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fmoney&docid=wJKsiLWqK67zHM&tbnid=X63Igi0LjP032M&vet=12ahUKEwjH0efd7Z6KAxV23TgGHQzJOxMQM3oECFIQAA..i&w=626&h=626&hcb=2&ved=2ahUKEwjH0efd7Z6KAxV23TgGHQzJOxMQM3oECFIQAA";
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+ 
 }
-.input container{
+.input-container{
   margin-bottom: 15px;
 } 
+.main-container{
+  border: 2px solid;
+  padding: 10px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 label{
   display: block;
   margin-bottom: 5px;
