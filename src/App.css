@@ -5,13 +5,11 @@
   box-sizing:border-box;
 }
 body{
-  width:100vw;
+  width:100%;
   height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  background: url("https://ik.imagekit.io/snujhhriv/395497-PCITPN-99.jpg?updatedAt=1734497425509");
-  background-size: contain;
 }
 
 h1{
@@ -22,8 +20,7 @@ h1{
   margin-bottom: 15px;
   color: rgb(128, 58, 0);
   text-align: center;
-  border-bottom: 2px dashed#ccc;
-  border-top: 2px dashed#ccc;
+ 
 }
 .box{
   width:100%;
@@ -36,8 +33,10 @@ h1{
 .main-container{
   border: 2px solid;
   padding: 10px 50px;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("https://ik.imagekit.io/snujhhriv/dollar_1308-41924.avif?updatedAt=1734497947158");
 }
 label{
   display: block;
@@ -58,12 +57,13 @@ select{
 .result{
   margin: 20px 0px;
   padding: 10px;
-  border: 2px dotted#db343c;
+  border: 2px solid black;
+  background-color: white;
   border-radius: 4px;
 }
 .result p{
   margin: 10px 0;
-  color: #3498db;
+  color:black;
   font-weight: bold;
   text-align: center;
 }
