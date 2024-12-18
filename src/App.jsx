@@ -39,35 +39,35 @@ function App() {
         <div className="input container">
           <label htmlFor="fromcurrency:"> From currency</label>
           <select id="fromcurrency" value={fromcurrency} onChange={handleFromcurrencychange}>
-            <option value="USD">Usd-United States Dollar</option>
-            <option value="EUR">Eur-Euro</option>
-            <option value="GBP">Gbp-British pound strerling</option>
-            <option value="JPY">Jpy-Japanpese yen</option>
-            <option value="AUD">Aud-Australian dollar</option>
-            <option value="CAD">Cad-Canadian dollar</option>
-            <option value="CNY">Cny-Chinese yuan</option>
-            <option value="INR">Inr-Indian rupee</option>
-            <option value="BRL">Brl-Brazilian real</option>
-            <option value="ZAR">Zar-South african rand</option>
-            <option value="PAK">Pak-Pakistani rupee</option>
-            <option value="SAR">Sar-Saudi Arabian Riyal</option>
+            <option value="USD">USD-United States Dollar</option>
+            <option value="EUR">EUR-Euro</option>
+            <option value="GBP">GBP-British Pound Strerling</option>
+            <option value="JPY">JPY-Japanpese Yen</option>
+            <option value="AUD">AUD-Australian Dollar</option>
+            <option value="CAD">CAD-Canadian Dollar</option>
+            <option value="CNY">CNY-Chinese Yuan</option>
+            <option value="INR">INR-Indian Rupee</option>
+            <option value="BRL">BRL-Brazilian Real</option>
+            <option value="ZAR">ZAR-South African Rand</option>
+            <option value="PAK">PAK-Pakistani Rupee</option>
+            <option value="SAR">SAR-Saudi Arabian Riyal</option>
           </select>
         </div>
         <div className="input-container">
           <label for="tocurrency"> To currency:</label>
           <select id="tocurrency" value={tocurrency} onChange={handleTocurrencychange}>
-            <option value="USD">Usd-United states dollar</option>
+            <option value="USD">USD-United States Dollar</option>
             <option value="EUR">Eur-Euro</option>
-            <option value="GBP">Gbp-British pound sterling</option>
-            <option value="JPY">Jpy-Japanese yen </option>
-            <option value="AUD">Aud-Austrtalian dollar</option>
-            <option value="CAD">Cad-Canadian dollar</option>
-            <option value="CNY">Cny-Chinese yuan</option>
-            <option value="INR">Inr-Indian rupees</option>
-            <option value="BRL">Brl=Brazilian real</option>
-            <option value="ZAR">Zar-South african rand</option>
-            <option value="PAK">Pak-Pakistani rupee</option>
-            <option value="SAR">Sar-Saudi Arabian Riyal</option>
+            <option value="GBP">GBP-British Pound Sterling</option>
+            <option value="JPY">JPY-Japanese Yen </option>
+            <option value="AUD">AUD-Austrtalian Dollar</option>
+            <option value="CAD">CAD-Canadian Dollar</option>
+            <option value="CNY">CNY-Chinese Yuan</option>
+            <option value="INR">INR-Indian Rupees</option>
+            <option value="BRL">BRL=Brazilian Real</option>
+            <option value="ZAR">ZAR-South African Rand</option>
+            <option value="PAK">PAK-Pakistani Rupee</option>
+            <option value="SAR">SAR-Saudi Arabian Riyal</option>
           </select>
         </div>
         <div className="result">
