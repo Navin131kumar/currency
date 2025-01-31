@@ -57,8 +57,20 @@ function App() {
             <option value="INR">INR-Indian Rupee</option>
             <option value="BRL">BRL-Brazilian Real</option>
             <option value="ZAR">ZAR-South African Rand</option>
-            <option value="PAK">PAK-Pakistani Rupee</option>
+            <option value="PKR">PKR-Pakistani Rupee</option>
             <option value="SAR">SAR-Saudi Arabian Riyal</option>
+            <option value="BDT">BDT-Bangladeshi Taka</option>
+            <option value="IRR">IRR-Iranian Real</option>
+            <option value="LKR">LKR-Sri lanka Rupee</option>
+            <option value="MYR">MYR-Malayian Ringgit</option>
+            <option value="IQD">IQD-Iraqi Dinnar</option>
+            <option value="NZD">NZD-New Zealand Dollar</option>
+            <option value="MXN">MXN-Mexican Peso</option>
+            <option value="MMK">MMK-Myanmar Kyat</option>
+            <option value="PGK">PGK-Papua New Guinea Kina</option>
+            <option value="KWD">KWD-Kuwaiti Dinnar</option>
+            <option value="SGD">SGD-Singapore Dollar</option>
+            <option value="THB">THB-Thai Bhatt</option>
           </select>
         </div>
         <div className="input-container">
@@ -74,8 +86,20 @@ function App() {
             <option value="INR">INR-Indian Rupees</option>
             <option value="BRL">BRL=Brazilian Real</option>
             <option value="ZAR">ZAR-South African Rand</option>
-            <option value="PAK">PAK-Pakistani Rupee</option>
+            <option value="PKR">PKR-Pakistani Rupee</option>
             <option value="SAR">SAR-Saudi Arabian Riyal</option>
+            <option value="BDT">BDT-Bangladeshi Taka</option>
+            <option value="IRR">IRR-Iranian Real</option>
+            <option value="LKR">LkR-Sri Lanka Rupee</option>
+            <option value="MYR">MYR-Malasyian Ringgit</option>
+            <option value="IQD">IQD-iraqi Dinnar</option>
+            <option value="NZD">NZD-New Zealand Dollar</option>
+            <option value="MXN">Mexican Peso</option>
+            <option value="MMK">MMK-Myanmar</option>
+            <option value="PGK">Papua New Guinea Kina</option>
+            <option value="KWD">KWD-Kuwaiti Dinnar</option>
+            <option value="SGD">SGD-Singapore Dollar</option>
+            <option value="THB">THB-Thai Bhatt</option>
           </select>
         </div>
         <div className="result">
