@@ -3,22 +3,30 @@ import './App.css'
 import axios from "axios";
 import { useEffect } from 'react';
 function App() {
-  const [amount, setAmount] = useState(1);
+  let [amount, setAmount] = useState(1);
   const [fromcurrency, setfromcurrency] = useState("USD");
   const [tocurrency, setTocurrency] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(null);
+  let [exchangerate,setExchangeRate]=useState(null);
 
   useEffect(() => {
     const getExchangeRate = async () => {
       try {
-        let url = 'https://api.exchangerate-api.com/v4/latest/ ${fromCurrency}';
+        const url = 'https://api.exchangerate-api.com/v4/latest/' +fromcurrency;
         const response = await axios.get(url);
-        console.log(response)
+        //console.log(response);
+        setExchangeRate(response.data.rates[tocurrency])
       } catch (error) {
         console.error("error fetching exchange rate:", error);
       }
     };
-  });
+    getExchangeRate();
+  },[fromcurrency,tocurrency]);
+  useEffect(() => {
+    if(exchangerate !== null){
+      setConvertedAmount((amount=exchangerate).toFixed(2))
+    }
+  },[amount,exchangerate])
   const handleAmountchange = (e) => {
     const value = parsefloat(e.target.value);
     setAmount(isNaN(value) ? 0 : value);
