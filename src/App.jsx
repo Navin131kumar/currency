@@ -71,6 +71,9 @@ function App() {
             <option value="KWD">KWD-Kuwaiti Dinnar</option>
             <option value="SGD">SGD-Singapore Dollar</option>
             <option value="THB">THB-Thai Bhatt</option>
+            <option value="UZS">UZS-Uzbekistani Som</option>
+            <option value="RUB">RUB-Russian Rouble</option>
+            <option value="AFN">AFN-Afghan Afgani</option>
           </select>
         </div>
         <div className="input-container">
@@ -100,6 +103,9 @@ function App() {
             <option value="KWD">KWD-Kuwaiti Dinnar</option>
             <option value="SGD">SGD-Singapore Dollar</option>
             <option value="THB">THB-Thai Bhatt</option>
+            <option value="UZS">UZS-Uzbekistani Som</option>
+            <option value="RUB">RUB-Russian Rouble</option>
+            <option value="AFN">AFN-Afghan Afghani</option>
           </select>
         </div>
         <div className="result">
