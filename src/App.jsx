@@ -8,7 +8,6 @@ function App() {
   const [tocurrency, setTocurrency] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(null);
   let [exchangerate,setExchangeRate]=useState(null);
-
   useEffect(() => {
     const getExchangeRate = async () => {
       try {
