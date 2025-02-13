@@ -63,42 +63,18 @@ function App() {
           value={fromcurrency}
           onChange={handleFromcurrencychange}
         >
-          <option value="USD">
-            <FlagIcon code="US" style={{ width: 20, height: 20, marginRight: 8 }} /> USD - United States Dollar
-          </option>
-          <option value="EUR">
-            <FlagIcon code="EU" style={{ width: 20, height: 20, marginRight: 8 }} /> EUR - Euro
-          </option>
-          <option value="GBP">
-            <FlagIcon code="GB" style={{ width: 20, height: 20, marginRight: 8 }} /> GBP - British Pound
-          </option>
-          <option value="INR">
-            <FlagIcon code="IN" style={{ width: 20, height: 20, marginRight: 8 }} /> INR - Indian Rupee
-          </option>
-          <option value="JPY">
-            <FlagIcon code="JP" style={{ width: 20, height: 20, marginRight: 8 }} /> JPY - Japanese Yen
-          </option>
-          <option value="AUD">
-            <FlagIcon code="AU" style={{ width: 20, height: 20, marginRight: 8 }} /> AUD - Australian Dollar
-          </option>
-          <option value="CAD">
-            <FlagIcon code="CA" style={{ width: 20, height: 20, marginRight: 8 }} /> CAD - Canadian Dollar
-          </option>
-          <option value="CNY">
-            <FlagIcon code="CN" style={{ width: 20, height: 20, marginRight: 8 }} /> CNY - Chinese Yuan
-          </option>
-          <option value="BRL">
-            <FlagIcon code="BR" style={{ width: 20, height: 20, marginRight: 8 }} /> BRL - Brazilian Real
-          </option>
-          <option value="ZAR">
-            <FlagIcon code="ZA" style={{ width: 20, height: 20, marginRight: 8 }} /> ZAR - South African Rand
-          </option>
-          <option value="PKR">
-            <FlagIcon code="PK" style={{ width: 20, height: 20, marginRight: 8 }} /> PKR - Pakistani Rupee
-          </option>
-          <option value="SAR">
-            <FlagIcon code="SA" style={{ width: 20, height: 20, marginRight: 8 }} /> SAR - Saudi Riyal
-          </option>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="EUR"> EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+          <option value="PKR">PKR - Pakistani Rupee</option>
+          <option value="SAR"> SAR - Saudi Riyal</option>
         </select>
       </div>
 
@@ -110,42 +86,18 @@ function App() {
           value={tocurrency}
           onChange={handleTocurrencychange}
         >
-          <option value="USD">
-            <FlagIcon code="US" style={{ width: 20, height: 20, marginRight: 8 }} /> USD - United States Dollar
-          </option>
-          <option value="EUR">
-            <FlagIcon code="EU" style={{ width: 20, height: 20, marginRight: 8 }} /> EUR - Euro
-          </option>
-          <option value="GBP">
-            <FlagIcon code="GB" style={{ width: 20, height: 20, marginRight: 8 }} /> GBP - British Pound
-          </option>
-          <option value="INR">
-            <FlagIcon code="IN" style={{ width: 20, height: 20, marginRight: 8 }} /> INR - Indian Rupee
-          </option>
-          <option value="JPY">
-            <FlagIcon code="JP" style={{ width: 20, height: 20, marginRight: 8 }} /> JPY - Japanese Yen
-          </option>
-          <option value="AUD">
-            <FlagIcon code="AU" style={{ width: 20, height: 20, marginRight: 8 }} /> AUD - Australian Dollar
-          </option>
-          <option value="CAD">
-            <FlagIcon code="CA" style={{ width: 20, height: 20, marginRight: 8 }} /> CAD - Canadian Dollar
-          </option>
-          <option value="CNY">
-            <FlagIcon code="CN" style={{ width: 20, height: 20, marginRight: 8 }} /> CNY - Chinese Yuan
-          </option>
-          <option value="BRL">
-            <FlagIcon code="BR" style={{ width: 20, height: 20, marginRight: 8 }} /> BRL - Brazilian Real
-          </option>
-          <option value="ZAR">
-            <FlagIcon code="ZA" style={{ width: 20, height: 20, marginRight: 8 }} /> ZAR - South African Rand
-          </option>
-          <option value="PKR">
-            <FlagIcon code="PK" style={{ width: 20, height: 20, marginRight: 8 }} /> PKR - Pakistani Rupee
-          </option>
-          <option value="SAR">
-            <FlagIcon code="SA" style={{ width: 20, height: 20, marginRight: 8 }} /> SAR - Saudi Riyal
-          </option>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP"> GBP - British Pound </option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+          <option value="PKR"> PKR - Pakistani Rupee</option>
+          <option value="SAR"> SAR - Saudi Riyal </option>
         </select>
       </div>
 
