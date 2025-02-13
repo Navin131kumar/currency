@@ -78,6 +78,8 @@ function App() {
           <option value="KWD">KWD-Kuwaiti Dinnar</option>
           <option value="BDT">BDT-Bangladeshi Taka</option>
           <option value="EGP">EGP-Egyptian Pound</option>
+          <option value="LKR">LKR-Sri Lankan Rupee</option>
+          <option value="RUB">RUB-Russian Rouble</option>
         </select>
       </div>
 
@@ -106,6 +108,8 @@ function App() {
           <option value="KWD">KWD-Kuwaiti Dnnar</option>
           <option value="BDT">BDT-Bangladeshi Taka</option>
           <option value="EGP">EGP-Egptian pound</option>
+          <option value="LKR">LKR-Sri Lankan Rupee</option>
+          <option value="RUB">RUB-Russian Rouble</option>
         </select>
       </div>
 
