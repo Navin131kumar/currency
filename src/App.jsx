@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import { FlagIcon } from 'react-flag-kit'; // Import the FlagIcon component
-
 function App() {
   let [amount, setAmount] = useState(1);
   const [fromcurrency, setfromcurrency] = useState("USD");
@@ -55,7 +53,6 @@ function App() {
         />
       </div>
       
-      {/* From Currency Select with Flags */}
       <div className="input-container">
         <label htmlFor="fromcurrency">From Currency</label>
         <select
@@ -78,7 +75,6 @@ function App() {
         </select>
       </div>
 
-      {/* To Currency Select with Flags */}
       <div className="input-container">
         <label htmlFor="tocurrency">To Currency</label>
         <select
