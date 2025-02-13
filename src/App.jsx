@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 function App() {
-  let [amount, setAmount] = useState(1);
+  let [amount, setAmount] = useState(0);
   const [fromcurrency, setfromcurrency] = useState("USD");
   const [tocurrency, setTocurrency] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(null);
