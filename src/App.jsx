@@ -21,13 +21,11 @@ function App() {
             const geoUrl = `https://geocode.xyz/${latitude},${longitude}?geoit=json`;
             const response = await axios.get(geoUrl);
             setUserCountry(response.data.country);
-            // Update the currency based on the country (simplified logic)
             if (response.data.country === 'India') {
               setToCurrency('INR');
             } else if (response.data.country === 'United States') {
-              setToCurrency('USD');
+              setToCurrency('USD');  
             } else {
-              setToCurrency('EUR'); // default for other countries
             }
           } catch (error) {
             console.error("Error fetching location data:", error);
