@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import axios from 'axios';
+import './App.css';
 
 function App() {
+  // Currency Converter States
   let [amount, setAmount] = useState(0);
   const [fromcurrency, setFromCurrency] = useState("USD");
   const [tocurrency, setToCurrency] = useState("INR");
@@ -10,8 +11,12 @@ function App() {
   let [exchangerate, setExchangeRate] = useState(null);
   const [userCountry, setUserCountry] = useState('');
 
+  // Chatbot States
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+
+  // Geolocation to fetch user country and set default currency
   useEffect(() => {
-    // Function to get user's location and country
     const getLocation = async () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(async (position) => {
@@ -24,8 +29,9 @@ function App() {
             if (response.data.country === 'India') {
               setToCurrency('INR');
             } else if (response.data.country === 'United States') {
-              setToCurrency('USD');  
+              setToCurrency('USD');
             } else {
+              // Handle other countries here
             }
           } catch (error) {
             console.error("Error fetching location data:", error);
@@ -39,6 +45,7 @@ function App() {
     getLocation();
   }, []);
 
+  // Fetch exchange rates
   useEffect(() => {
     const getExchangeRate = async () => {
       try {
@@ -52,17 +59,20 @@ function App() {
     getExchangeRate();
   }, [fromcurrency, tocurrency]);
 
+  // Update converted amount when amount or exchange rate changes
   useEffect(() => {
     if (exchangerate !== null) {
       setConvertedAmount((amount * exchangerate).toFixed(2));
     }
   }, [amount, exchangerate]);
 
+  // Handle user input for amount change
   const handleAmountChange = (e) => {
     const value = parseFloat(e.target.value);
     setAmount(isNaN(value) ? 0 : value);
   };
 
+  // Handle currency selection changes
   const handleFromCurrencyChange = (e) => {
     setFromCurrency(e.target.value);
   };
@@ -71,6 +81,39 @@ function App() {
     setToCurrency(e.target.value);
   };
 
+  // Send message to chatbot API and get response
+  const handleSendMessage = async () => {
+    if (input.trim() === '') return;
+
+    // Send user's message to Dialogflow
+    const newMessage = { sender: 'user', text: input };
+    setMessages([...messages, newMessage]);
+    setInput('');
+
+    try {
+      const response = await axios.post(
+        'https://api.dialogflow.com/v1/query?v=20150910',
+        {
+          query: input,
+          lang: 'en',
+          sessionId: '12345', // You can generate unique session IDs
+        },
+        {
+          headers: {
+            Authorization: `Bearer YOUR_DIALOGFLOW_ACCESS_TOKEN`,
+          },
+        }
+      );
+
+      const botMessage = {
+        sender: 'assistant',
+        text: response.data.result.fulfillment.speech,
+      };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    } catch (error) {
+      console.error("Error fetching chatbot response:", error);
+    }
+  };
   return (
     <div className="main-container">
       <h1>Currency Converter</h1>
@@ -91,26 +134,26 @@ function App() {
           value={fromcurrency}
           onChange={handleFromCurrencyChange}
         >
-          <option value="USD">USD - United States Dollar</option>
-          <option value="EUR"> EUR - Euro</option>
-          <option value="GBP">GBP-British Pound</option>
-          <option value="INR">INR-Indian Rupee</option>
-          <option value="JPY">JPY-Japanese Yen</option>
-          <option value="AUD">AUD-Australian Dollar</option>
-          <option value="CAD">CAD-Canadian Dollar</option>
-          <option value="CNY">CNY-Chinese Yuan</option>
-          <option value="BRL">BRL-Brazilian Real</option>
-          <option value="ZAR">ZAR-South African Rand</option>
-          <option value="PKR">PKR-Pakistani Rupee</option>
-          <option value="SAR">SAR-Saudi Riyal</option>
-          <option value="AFN">AFN-Afghan Afghani</option>
-          <option value="SGD">SGD-Singapore Dollar</option>
-          <option value="UZS">UZS-Uzbekistan Som</option>
-          <option value="KWD">KWD-Kuwaiti Dinnar</option>
-          <option value="BDT">BDT-Bangladeshi Taka</option>
-          <option value="EGP">EGP-Egyptian Pound</option>
-          <option value="LKR">LKR-Sri Lankan Rupee</option>
-          <option value="RUB">RUB-Russian Rouble</option>
+        <option value="USD">USD-United States Dollar</option>
+        <option value="EUR">EUR-Euro</option>
+        <option value="GBP">GBP-British Pound</option>
+        <option value="INR">INR-Indian Rupee</option>
+        <option value="JPY">JPY-Japanese Yen</option>
+        <option value="AUD">AUD-Australian Dollar</option>
+        <option value="CAD">CAD-Canadian Dollar</option>
+        <option value="CNY">CNY-Chinese Yuan</option>
+        <option value="BRL">BRL-Brazilian Real</option>
+        <option value="ZAR">ZAR-South African Rand</option>
+        <option value="MXN">MXN-Mexican Peso</option>
+        <option value="RUB">RUB-Russian Ruble</option>
+        <option value="SGD">SGD-Singapore Dollar</option>
+        <option value="CHF">CHF-Swiss Franc</option>
+        <option value="TRY">TRY-Turkish Lira</option>
+        <option value="KRW">KRW-South Korean Won</option>
+        <option value="SEK">SEK-Swedish Krona</option>
+        <option value="NOK">NOK-Norwegian Krone-</option>
+        <option value="NZD">NZD-New Zealand Dollar</option>
+        <option value="AED">AED-UAE Dirham</option>
         </select>
       </div>
 
@@ -121,26 +164,27 @@ function App() {
           value={tocurrency}
           onChange={handleToCurrencyChange}
         >
-          <option value="USD">USD-United States Dollar</option>
-          <option value="EUR">EUR-Euro</option>
-          <option value="GBP">GBP-British Pound</option>
-          <option value="INR">INR-Indian Rupee</option>
-          <option value="JPY">JPY-Japanese Yen</option>
-          <option value="AUD">AUD-Australian Dollar</option>
-          <option value="CAD">CAD-Canadian Dollar</option>
-          <option value="CNY">CNY-Chinese Yuan</option>
-          <option value="BRL">BRL-Brazilian Real</option>
-          <option value="ZAR">ZAR-South African Rand</option>
-          <option value="PKR">PKR-Pakistani Rupee</option>
-          <option value="SAR">SAR-Saudi Riyal</option>
-          <option value="AFN">AFN-Afghan Afghani</option>
-          <option value="SGD">SGD-Singapore Dollar</option>
-          <option value="UZS">UZS-Uzbekistan Som</option>
-          <option value="KWD">KWD-Kuwaiti Dnnar</option>
-          <option value="BDT">BDT-Bangladeshi Taka</option>
-          <option value="EGP">EGP-Egyptian pound</option>
-          <option value="LKR">LKR-Sri Lankan Rupee</option>
-          <option value="RUB">RUB-Russian Rouble</option>
+        <option value="USD">USD-United States Dollar</option>
+        <option value="EUR">EUR-Euro</option>
+        <option value="GBP">GBP-British Pound</option>
+        <option value="INR">INR-Indian Rupee</option>
+        <option value="JPY">JPY-Japanese Yen</option>
+        <option value="AUD">AUD-Australian Dollar</option>
+        <option value="CAD">CAD-Canadian Dollar</option>
+        <option value="CNY">CNY-Chinese Yuan</option>
+        <option value="BRL">BRL-Brazilian Real</option>
+        <option value="ZAR">ZAR-South African Rand</option>
+        <option value="MXN">MXN-Mexican Peso</option>
+        <option value="RUB">RUB-Russian Ruble</option>
+        <option value="SGD">SGD-Singapore Dollar</option>
+        <option value="CHF">CHF-Swiss France</option>
+        <option value="TRY">TRY-Turkish Lira</option>
+        <option value="KRW">KRW-South Korean Won</option>
+        <option value="SEK">SEK-Swedish Krona</option>
+        <option value="NOK">NOK-Norwegian Krone</option>
+        <option value="NZD">NZD-New Zealand Dollar</option>
+        <option value="AED">AED-UAE Dirham</option>
+          
         </select>
       </div>
 
@@ -149,6 +193,18 @@ function App() {
           {amount} {fromcurrency} is equal to {convertedAmount} {tocurrency}
         </p>
       </div>
+
+      {/* Chatbot UI */}
+      <div className="chat-container">
+      <div className="chat-window">
+        {messages.map((message, index) => (
+          <div key={index} className={`message ${message.sender}`}>
+            {message.text}
+          </div>
+        ))}
+      </div>
+      
+    </div>
     </div>
   );
 }
